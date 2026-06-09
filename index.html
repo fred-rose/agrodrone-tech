@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AgroDrone Tech</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-brasil">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="./index.html">
+      <i class="bi bi-broadcast-pin"></i> AgroDrone Tech
+    </a>
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="./index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="./sobre.html">Sobre nós</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="./produtos.html">Serviços</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="./equipe/equipe.html">Equipe</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="./contato/contato.html">Contato</a>
+        </li>
+
+      </ul>
+
+      <form class="d-flex me-2" role="search">
+        <input id="campoBusca"
+               class="form-control me-2"
+               type="search"
+               placeholder="Buscar serviço..."
+               oninput="filtrarServicosAgro()">
+      </form>
+
+      <button class="btn btn-registrar" type="button" data-bs-toggle="modal" data-bs-target="#modalRegistro">
+        Solicitar orçamento
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Cabeçalho com carrossel -->
+<header>
+  <div id="carouselDestaque" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="hero-slide hero-1">
+          <div class="container text-center text-white">
+            <h1 class="display-5 fw-bold">Bem-vindo à AgroDrone Tech</h1>
+            <p class="lead">
+              Pulverização agrícola com drones para levar mais precisão, economia e tecnologia ao campo.
+            </p>
+            <a href="./produtos.html" class="btn btn-warning fw-bold">Conhecer serviços</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="hero-slide hero-2">
+          <div class="container text-center text-white">
+            <h1 class="display-5 fw-bold">Tecnologia para sua lavoura</h1>
+            <p class="lead">
+              Aplicação de defensivos, fertilizantes e bioinsumos com mais controle e eficiência.
+            </p>
+            <a href="./contato.html" class="btn btn-warning fw-bold">Solicitar análise</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="hero-slide hero-3">
+          <div class="container text-center text-white">
+            <h1 class="display-5 fw-bold">Mais produtividade no campo</h1>
+            <p class="lead">
+              Soluções com drones agrícolas para produtores que buscam inovação, segurança e agilidade.
+            </p>
+            <a href="./sobre.html" class="btn btn-warning fw-bold">Conhecer empresa</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaque" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDestaque" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Sobre -->
+<section class="container my-5">
+  <div class="row g-4 align-items-center">
+    <div class="col-md-6">
+      <p class="subtitulo">AGRICULTURA DE PRECISÃO</p>
+      <h2 class="titulo-principal">Soluções modernas para o campo</h2>
+      <p>
+        A AgroDrone Tech é uma empresa fictícia especializada em pulverização agrícola com drones.
+        Nosso objetivo é aplicar tecnologia no agronegócio, tornando o manejo da lavoura mais preciso,
+        seguro e econômico.
+      </p>
+      <a href="./sobre.html" class="btn btn-registrar">Saiba mais</a>
+    </div>
+
+    <div class="col-md-6">
+      <div class="info-box">
+        <h5 class="text-aviao">Por que usar drones?</h5>
+        <p>
+          Os drones ajudam na aplicação localizada, reduzem desperdícios e permitem alcançar áreas
+          de difícil acesso com mais agilidade.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Diferenciais -->
+<section class="container my-5">
+  <h2 class="text-center titulo-principal mb-4">Nossos diferenciais</h2>
+
+  <div class="row g-4">
+    <div class="col-md-3">
+      <div class="info-box text-center">
+        <i class="bi bi-droplet-half"></i>
+        <h5 class="text-aviao">Precisão</h5>
+        <p>Aplicação controlada em pontos específicos da lavoura.</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="info-box text-center">
+        <i class="bi bi-cash-coin"></i>
+        <h5 class="text-aviao">Economia</h5>
+        <p>Redução de desperdício de produtos agrícolas.</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="info-box text-center">
+        <i class="bi bi-shield-check"></i>
+        <h5 class="text-aviao">Segurança</h5>
+        <p>Menor exposição humana ao contato com defensivos.</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="info-box text-center">
+        <i class="bi bi-graph-up-arrow"></i>
+        <h5 class="text-aviao">Produtividade</h5>
+        <p>Mais agilidade nas operações agrícolas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Serviços -->
+<section class="container my-5">
+  <h2 class="text-center titulo-principal mb-4">Serviços em destaque</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-4 aviao-item">
+      <div class="aviao-card text-center">
+        <i class="bi bi-droplet-half icone-brasil fs-1"></i>
+        <h5 class="text-aviao mt-3">Pulverização agrícola</h5>
+        <p>Aplicação de defensivos, fertilizantes e bioinsumos com drones.</p>
+        <a href="./produtos.html" class="btn-aviao text-decoration-none">Ver detalhes</a>
+      </div>
+    </div>
+
+    <div class="col-md-4 aviao-item">
+      <div class="aviao-card text-center">
+        <i class="bi bi-map icone-brasil fs-1"></i>
+        <h5 class="text-aviao mt-3">Mapeamento agrícola</h5>
+        <p>Análise visual de áreas agrícolas para apoiar o planejamento.</p>
+        <a href="./produtos.html" class="btn-aviao text-decoration-none">Ver detalhes</a>
+      </div>
+    </div>
+
+    <div class="col-md-4 aviao-item">
+      <div class="aviao-card text-center">
+        <i class="bi bi-clipboard-data icone-brasil fs-1"></i>
+        <h5 class="text-aviao mt-3">Relatório técnico</h5>
+        <p>Resumo da operação realizada e informações da área atendida.</p>
+        <a href="./produtos.html" class="btn-aviao text-decoration-none">Ver detalhes</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Accordion -->
+<section class="container my-5">
+  <h2 class="text-center subtitulo mb-4">DÚVIDAS FREQUENTES</h2>
+
+  <div class="accordion" id="accordionHome">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#duvida1">
+          Como funciona a pulverização com drones?
+        </button>
+      </h2>
+      <div id="duvida1" class="accordion-collapse collapse show" data-bs-parent="#accordionHome">
+        <div class="accordion-body">
+          A equipe analisa a área, planeja a rota do drone e realiza a aplicação de forma controlada.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#duvida2">
+          Quais culturas podem ser atendidas?
+        </button>
+      </h2>
+      <div id="duvida2" class="accordion-collapse collapse" data-bs-parent="#accordionHome">
+        <div class="accordion-body">
+          O serviço pode ser simulado para soja, milho, café, pastagem, hortaliças e outras culturas.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Depoimentos -->
+<section class="container my-5">
+  <h2 class="text-center titulo-principal mb-4">Depoimentos</h2>
+
+  <div id="carouselDepoimentos" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="depoimento-box text-center p-5">
+          <p class="lead">“A tecnologia com drones trouxe mais agilidade para o manejo da lavoura.”</p>
+          <h5>Produtor de soja</h5>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="depoimento-box text-center p-5">
+          <p class="lead">“A aplicação localizada ajudou a reduzir desperdícios na propriedade.”</p>
+          <h5>Produtor rural</h5>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="depoimento-box text-center p-5">
+          <p class="lead">“O uso de drones deixa o trabalho mais moderno, seguro e organizado.”</p>
+          <h5>Cliente fictício</h5>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<!-- Contato rápido -->
+<section class="container my-5">
+  <div class="row g-4 align-items-center">
+    <div class="col-md-6">
+      <h2 class="titulo-principal">Solicite uma análise</h2>
+      <p>
+        Entre em contato com a AgroDrone Tech e veja como a pulverização com drones pode ajudar sua lavoura.
+      </p>
+    </div>
+
+    <div class="col-md-6 text-md-end">
+      <a href="./contato.html" class="btn btn-registrar">Ir para contato</a>
+    </div>
+  </div>
+</section>
+
+<!-- Modal de orçamento -->
+<div class="modal fade" id="modalRegistro" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Solicitar orçamento</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Nome</label>
+            <input type="text" class="form-control" placeholder="Digite seu nome">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Telefone</label>
+            <input type="tel" class="form-control" placeholder="Digite seu telefone">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Tipo de cultura</label>
+            <select class="form-select">
+              <option>Soja</option>
+              <option>Milho</option>
+              <option>Café</option>
+              <option>Pastagem</option>
+              <option>Hortaliças</option>
+            </select>
+          </div>
+
+          <button type="button" class="btn btn-registrar w-100" data-bs-dismiss="modal">
+            Enviar solicitação
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Rodapé -->
+<footer class="footer-brasil text-center py-4">
+  <p class="mb-1 fw-bold">AgroDrone Tech</p>
+  <p class="mb-2">Pulverização agrícola com drones</p>
+
+  <div class="social-icons">
+    <i class="bi bi-instagram"></i>
+    <i class="bi bi-facebook"></i>
+    <i class="bi bi-whatsapp"></i>
+    <i class="bi bi-linkedin"></i>
+  </div>
+
+  <p class="mt-3 mb-0">© 2026 AgroDrone Tech - Todos os direitos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
